@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorpresa para mi amor</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ff4d4d;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #yes {
+            background-color: white;
+            color: red;
+        }
+        #no {
+            background-color: white;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín?</h1>
+    <div class="buttons">
+        <button id="yes" class="btn" onclick="redirectToLove()">Sí</button>
+        <button id="no" class="btn" onclick="shrinkNo()">No</button>
+    </div>
+    <script>
+        function shrinkNo() {
+            let noButton = document.getElementById('no');
+            let yesButton = document.getElementById('yes');
+            noButton.style.fontSize = '10px';
+            noButton.style.padding = '5px 10px';
+            yesButton.style.fontSize = '30px';
+            yesButton.style.padding = '15px 30px';
+        }
+        function redirectToLove() {
+            window.location.href = "love.html";
+        }
+    </script>
+</body>
+</html>
